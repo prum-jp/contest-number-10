@@ -5,7 +5,7 @@ updates:
   directory: '/'
   schedule:
     interval: weekly
-    day: 'sunday'
+    day: 'monday'
     time: '10:00'
     timezone: 'Asia/Tokyo'
   open-pull-requests-limit: 5
@@ -23,7 +23,7 @@ updates:
   directory: '/'
   schedule:
     interval: weekly
-    day: 'sunday'
+    day: 'monday'
     time: '10:00'
     timezone: 'Asia/Tokyo'
 
