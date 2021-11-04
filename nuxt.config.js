@@ -74,5 +74,10 @@ export default defineNuxtConfig({
       babelrc: false,
       compact: false
     }
+  },
+
+  // docs: https://storybook.nuxtjs.org/
+  storybook: {
+    // Options
   }
 })
