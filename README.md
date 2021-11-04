@@ -6,7 +6,7 @@
 # install dependencies
 $ yarn install
 
-# setup git
+# setup husky
 $ npx husky-init
 
 # serve with hot reload at localhost:3000
