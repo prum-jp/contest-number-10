@@ -1,0 +1,3 @@
+[submodule "base-openapi"]
+	path = base-openapi
+	url = git@github.com:prum-jp/base-openapi.git
