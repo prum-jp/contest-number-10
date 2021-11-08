@@ -6,7 +6,7 @@
   >
 </template>
 
-<style>
+<style lang="scss">
 .VuetifyLogo {
   height: 180px;
   width: 180px;
