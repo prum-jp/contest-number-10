@@ -1,11 +1,11 @@
 ---
 to: components/<%= category %>/<%= h.changeCase.pascal(name) %>/index.vue
 ---
-<template>
+<template lang="pug">
 </template>
 
 <script lang="ts" setup>
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>
