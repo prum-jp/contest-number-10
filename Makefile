@@ -1,5 +1,9 @@
 SHELL=/bin/bash
 
+init:
+	@yarn install && \
+	yarn prepare
+
 gen-api:
 	@docker run -it --rm \
     -v "${PWD}:/local" openapitools/openapi-generator-cli generate \
