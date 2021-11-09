@@ -1,5 +1,5 @@
 ---
-to: src/components/<%= category %>/<%= h.changeCase.pascal(name) %>/index.spec.ts
+to: test/<%= category %>/<%= h.changeCase.pascal(name) %>/index.spec.ts
 ---
 <%
   cName = h.changeCase.camel(name)
