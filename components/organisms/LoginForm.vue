@@ -53,6 +53,7 @@ export default defineComponent({
     }))
 
     // FIXME: validate control modules の追加
+    // docs: https://codepen.io/pen/?&editors=101
     const rules = {
       required: (value: string) => !!value || 'Required.',
       email: (value: string) => {
