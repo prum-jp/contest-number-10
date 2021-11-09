@@ -11,9 +11,8 @@ v-card(
     v-container
       v-row
         v-col(
-          cols="12"
           sm="12"
-          md="3"
+          md="12"
         )
           v-text-field(
             :rules="[rules.required]"
@@ -21,9 +20,8 @@ v-card(
           )
       v-row
         v-col(
-          cols="12"
           sm="12"
-          md="3"
+          md="12"
         )
           v-text-field(
             :rules="[rules.required]"
