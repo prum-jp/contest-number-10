@@ -1,12 +1,13 @@
 ---
-to: test/<%= category %>/<%= h.changeCase.pascal(name) %>/index.spec.ts
+to: test/<%= category %>/<%= h.changeCase.pascal(name) %>.spec.ts
 ---
 <%
   cName = h.changeCase.camel(name)
   PName = h.changeCase.pascal(name)
 -%>
 
-import Component from '~/components/<%= category %>/<%= PName %>'
+import { shallowMount } from '@vue/test-utils'
+import Component from '~/components/<%= category %>/<%= PName %>.vue'
 
 describe('<%= cName %>', () => {
   test('snapshot', () => {
