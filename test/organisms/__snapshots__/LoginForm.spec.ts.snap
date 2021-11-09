@@ -23,8 +23,7 @@ exports[`<%= cName %> snapshot 1`] = `
         tag="div"
       >
         <v-col-stub
-          cols="12"
-          md="3"
+          md="12"
           sm="12"
           tag="div"
         >
@@ -46,8 +45,7 @@ exports[`<%= cName %> snapshot 1`] = `
         tag="div"
       >
         <v-col-stub
-          cols="12"
-          md="3"
+          md="12"
           sm="12"
           tag="div"
         >
