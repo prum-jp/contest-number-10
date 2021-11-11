@@ -1,0 +1,25 @@
+name: Deploy Storybook
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-storybook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+
+      - name: install packages 👨🏻‍💻
+        run: yarn install
+
+      - name: build storybook 🛠
+        run: yarn build:storybook
+
+      - name: deploy storybook 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder:
