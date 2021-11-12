@@ -4,9 +4,19 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - README.md
+      - .github/**
+      - .hygen/**
+      - .husky/**
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - README.md
+      - .github/**
+      - .hygen/**
+      - .husky/**
 
 jobs:
   ci:
