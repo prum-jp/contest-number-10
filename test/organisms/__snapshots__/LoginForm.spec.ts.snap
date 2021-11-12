@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<%= cName %> snapshot 1`] = `
+<v-card-stub
+  class="px-7 py-4 text-center"
+  loaderheight="4"
+  tag="div"
+>
+  <v-card-title-stub
+    class="py-0 justify-center"
+  >
+    <div
+      class="headline"
+    >
+      ログイン
+    </div>
+  </v-card-title-stub>
+  <v-form-stub>
+    <v-container-stub
+      tag="div"
+    >
+      <v-row-stub
+        tag="div"
+      >
+        <v-col-stub
+          md="12"
+          sm="12"
+          tag="div"
+        >
+          <v-text-field-stub
+            backgroundcolor=""
+            clearicon="$clear"
+            errorcount="1"
+            errormessages=""
+            loaderheight="2"
+            messages=""
+            rules="[Function]"
+            successmessages=""
+            type="text"
+            value=""
+          />
+        </v-col-stub>
+      </v-row-stub>
+      <v-row-stub
+        tag="div"
+      >
+        <v-col-stub
+          md="12"
+          sm="12"
+          tag="div"
+        >
+          <v-text-field-stub
+            backgroundcolor=""
+            clearicon="$clear"
+            errorcount="1"
+            errormessages=""
+            loaderheight="2"
+            messages=""
+            rules="[Function]"
+            successmessages=""
+            type="text"
+            value=""
+          />
+        </v-col-stub>
+      </v-row-stub>
+      <v-row-stub
+        class="justify-center"
+        tag="div"
+      >
+        <v-btn-stub
+          activeclass=""
+          color="primary"
+          disabled="true"
+          tag="button"
+          type="button"
+        >
+          ログイン
+        </v-btn-stub>
+      </v-row-stub>
+    </v-container-stub>
+  </v-form-stub>
+</v-card-stub>
+`;

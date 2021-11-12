@@ -6,7 +6,7 @@ to: stories/<%= category %>/<%= h.changeCase.pascal(name) %>.stories.ts
   Category = h.changeCase.pascal(category)
 -%>
 
-import <%= Name %> from '~/components/<%= category %>/<%= Name %>/index.vue'
+import <%= Name %> from '~/components/<%= category %>/<%= Name %>.vue'
 
 export default {
   title: '<%= Category %>/<%= Name %>',
