@@ -52,9 +52,9 @@ export default defineComponent({
     const execute = () => {
       results.value = []
  
-      // // 入力数字格納用配列
+      // 入力数字格納用配列
       const inputNumberArray = ref<Array<Big>>([])
-      // // 入力数字を１要素ごと配列へ格納
+      // 入力数字を１要素ごと配列へ格納
       inputNumberArray.value.push(Big(first.value))
       inputNumberArray.value.push(Big(second.value))
       inputNumberArray.value.push(Big(third.value))
@@ -66,10 +66,10 @@ export default defineComponent({
       // 計算を実行
       if(calculation(inputNumberArray.value)){
         // true：正解の式が導出できた
-        // results.value.push(String(formula + ' = ' + answerNumber + ' ...え！？' + answerNumber + 'なったかも！！'))
+        results.value.push(String(formula + ' = ' + answerNumber + ' ...え！？' + answerNumber + 'なったかも！！'))
       } else {
         // false：正解の式が導出できなかった
-        // results.value.push(String(answerNumber + 'になりませんでしたぁ'))
+        results.value.push(String(answerNumber + 'になりませんでしたぁ'))
       }
     }
 
