@@ -102,23 +102,23 @@ export default defineComponent({
         calcNumberArray[i] = inputNumberArray[0]
         calcNumberArray[0] = tmpNum
 
-      //   // 先頭数字を固定し、2〜4桁目を順に入れ替えていく
-      //   for(let j = 0; j < 6; j++ ){
+        // 先頭数字を固定し、2〜4桁目を順に入れ替えていく
+        for(let j = 0; j < 6; j++ ){
 
-      //     // 初回
-      //     if( j === 0 ){
-      //       // 初回は並び替えずに処理させる
+          // 初回
+          if( j === 0 ){
+            // 初回は並び替えずに処理させる
 
-      //     // 奇数回目
-      //     }else if( j % 2 === 1 ){
-      //       // 2桁目と3桁目を入れ替える
-      //       calcNumberArray.splice(1, 2, calcNumberArray[2], calcNumberArray[1])
+          // 奇数回目
+          }else if( j % 2 === 1 ){
+            // 2桁目と3桁目を入れ替える
+            calcNumberArray.splice(1, 2, calcNumberArray[2], calcNumberArray[1])
             
-      //     // 偶数回目
-      //     }else{
-      //       // 3桁目と4桁目を入れ替える
-      //       calcNumberArray.splice(2, 2, calcNumberArray[3], calcNumberArray[2])
-      //     }
+          // 偶数回目
+          }else{
+            // 3桁目と4桁目を入れ替える
+            calcNumberArray.splice(2, 2, calcNumberArray[3], calcNumberArray[2])
+          }
 
       //     // 四則演算記号のバリエーションを作成しながら試算
       //     for(let i = 0; i < symbolVariations.value.length; i++ ){
@@ -166,7 +166,7 @@ export default defineComponent({
       //         return true
       //       }
       //     }
-      //   }
+        }
       }
 
       return false
