@@ -170,7 +170,7 @@ export default defineComponent({
       second: number,
       third: number
     ): void => {
-      const wishNum: number = resultNum * first
+      const wishNum: number = first === 0 ? resultNum : resultNum * first
       const resultArray = getSucceedFormula(second, third, wishNum)
 
       resultArray.forEach((result) => {
@@ -179,10 +179,12 @@ export default defineComponent({
     }
 
     const execute = () => {
+      results.splice(0)
       calc10ByPlus(first.value, second.value, third.value)
       calc10ByMinus(first.value, second.value, third.value)
       calc10ByTimes(first.value, second.value, third.value)
       calc10ByDivide(first.value, second.value, third.value)
+      if (results.length === 0) results.push('あかーーーん')
     }
 
     return {
