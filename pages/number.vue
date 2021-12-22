@@ -33,7 +33,7 @@ export default defineComponent({
     const results = ref<Array<String>>([])
 
     // 導出する正解の値
-    // const answerNumber = <number>(10)
+    const answerNumber = 10
 
     // 10になる式を格納する
     // const formula = ref<String>('')
@@ -162,14 +162,14 @@ export default defineComponent({
             }
 
             // 正解の値が導き出せたらtrueを返却して処理終了
-            // if(tmpCalcResult.eq(answerNumber)){
-              // return true
-            // }
+            if(tmpCalcResult.eq(answerNumber)){
+              return true;
+            }
           }
         }
       }
 
-      return false
+      return false;
     }      
 
     return {
