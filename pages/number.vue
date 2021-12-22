@@ -36,7 +36,7 @@ export default defineComponent({
     const answerNumber = 10
 
     // 10になる式を格納する
-    // const formula = ref<String>('')
+    const formula = ref<String>('')
 
     // 四則演算記号
     const symbols = ['+', '-', '*', '/']
@@ -129,7 +129,7 @@ export default defineComponent({
             let tmpCalcResult:Big = Big(calcNumberArray[0])
 
             // 計算式をクリア（初期値として先頭数字を設定）
-            // formula.value = String(calcNumberArray[0])
+            formula.value = String(calcNumberArray[0])
 
             // 数字・記号の前から順に計算
             for(let j = 0; j < symbolVariation.length; j++){
@@ -137,15 +137,15 @@ export default defineComponent({
               switch (symbolVariation[j]) {
                 case '+':
                   tmpCalcResult=tmpCalcResult.add(calcNumberArray[j+1]) 
-                  // formula.value += ' + ' + (String)(calcNumberArray[j+1])
+                  formula.value += ' + ' + (String)(calcNumberArray[j+1])
                   break;
                 case '-':
                   tmpCalcResult=tmpCalcResult.minus(calcNumberArray[j+1]) 
-                  // formula.value += ' - ' + (String)(calcNumberArray[j+1])
+                  formula.value += ' - ' + (String)(calcNumberArray[j+1])
                   break;
                 case '*':
                   tmpCalcResult=tmpCalcResult.times(calcNumberArray[j+1]) 
-                  // formula.value += ' * ' + (String)(calcNumberArray[j+1])
+                  formula.value += ' * ' + (String)(calcNumberArray[j+1])
                   break;
                 case '/':
                   // ゼロ割になる場合はスキップ
@@ -153,7 +153,7 @@ export default defineComponent({
                     continue;
                   }else{
                     tmpCalcResult=tmpCalcResult.div(calcNumberArray[j+1]) 
-                    // formula.value += ' / ' + (String)(calcNumberArray[j+1])
+                    formula.value += ' / ' + (String)(calcNumberArray[j+1])
                   }
                   break;
                 default:
