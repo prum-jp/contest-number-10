@@ -2,6 +2,7 @@
   v-form
     v-container
       v-row
+        //- <h2>問題：4つの数字を計算して、合計が10になるようにしてください</h2>
         input-number(@setNumber="(value) => (first = value)")
         input-number(@setNumber="(value) => (second = value)")
         input-number(@setNumber="(value) => (third = value)")
@@ -41,6 +42,8 @@ export default defineComponent({
     const fourth = ref<number>(0)
     // 10になる答えを入れる配列
     const results = ref<Array<String>>([])
+    let ans = ref<any>(0)
+
 
     // "計算実行"ボタン押下時に実行されるメソッド
     // ここでresultsに10になる答えを入れる
@@ -49,11 +52,18 @@ export default defineComponent({
     const execute = () => {
       results.value = []
       console.log('execute')
-      const f: Big = Big(first.value)
-      const s: Big = Big(second.value)
-      const t: Big = Big(third.value)
-      results.value.push(String(f.div(s).times(t).toFixed(0)))
+      const a: Big = Big(first.value)
+      const b: Big = Big(second.value)
+      const c: Big = Big(third.value)
+      const d: Big = Big(fourth.value)
+      ans = results.value.push(String(a.div(b).times(c).times(d).toFixed(0)))
+      if (ans === 10){
+        alert("10になります。おめでとうございます")
+      } else {
+        alert("10ではないです。出直してください")
+      }
     }
+    
 
     return {
       first,
