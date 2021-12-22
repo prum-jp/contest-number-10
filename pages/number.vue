@@ -120,52 +120,52 @@ export default defineComponent({
             calcNumberArray.splice(2, 2, calcNumberArray[3], calcNumberArray[2])
           }
 
-      //     // 四則演算記号のバリエーションを作成しながら試算
-      //     for(let i = 0; i < symbolVariations.value.length; i++ ){
-      //       // 四則演算記号のバリエーションを１つずつ取得し、カンマで区切って今回処理用の配列へ格納
-      //       let symbolVariation = symbolVariations.value[i].split(',')
+          // 四則演算記号のバリエーションを作成しながら試算
+          for(let i = 0; i < symbolVariations.value.length; i++ ){
+            // 四則演算記号のバリエーションを１つずつ取得し、カンマで区切って今回処理用の配列へ格納
+            const symbolVariation = symbolVariations.value[i].split(',')
 
-      //       // 途中計算結果格納用（初期値として先頭数字を設定）
-      //       let tmpCalcResult:Big = Big(calcNumberArray[0])
+            // 途中計算結果格納用（初期値として先頭数字を設定）
+            let tmpCalcResult:Big = Big(calcNumberArray[0])
 
-      //       // 計算式をクリア（初期値として先頭数字を設定）
-      //       formula.value = String(calcNumberArray[0])
+            // 計算式をクリア（初期値として先頭数字を設定）
+            // formula.value = String(calcNumberArray[0])
 
-      //       // 数字・記号の前から順に計算
-      //       for(let j = 0; j < symbolVariation.length; j++){
-      //         // 記号によって計算用メソッドを振り分ける
-      //         switch (symbolVariation[j]) {
-      //           case '+':
-      //             tmpCalcResult=tmpCalcResult.add(calcNumberArray[j+1]) 
-      //             formula.value += ' + ' + (String)(calcNumberArray[j+1])
-      //             break;
-      //           case '-':
-      //             tmpCalcResult=tmpCalcResult.minus(calcNumberArray[j+1]) 
-      //             formula.value += ' - ' + (String)(calcNumberArray[j+1])
-      //             break;
-      //           case '*':
-      //             tmpCalcResult=tmpCalcResult.times(calcNumberArray[j+1]) 
-      //             formula.value += ' * ' + (String)(calcNumberArray[j+1])
-      //             break;
-      //           case '/':
-      //             // ゼロ割になる場合はスキップ
-      //             if(calcNumberArray[j+1].eq(0)){
-      //               continue;
-      //             }else{
-      //               tmpCalcResult=tmpCalcResult.div(calcNumberArray[j+1]) 
-      //               formula.value += ' / ' + (String)(calcNumberArray[j+1])
-      //             }
-      //             break;
-      //           default:
-      //             break;
-      //         }
-      //       }
+            // 数字・記号の前から順に計算
+            for(let j = 0; j < symbolVariation.length; j++){
+              // 記号によって計算用メソッドを振り分ける
+              switch (symbolVariation[j]) {
+                case '+':
+                  tmpCalcResult=tmpCalcResult.add(calcNumberArray[j+1]) 
+                  // formula.value += ' + ' + (String)(calcNumberArray[j+1])
+                  break;
+                case '-':
+                  tmpCalcResult=tmpCalcResult.minus(calcNumberArray[j+1]) 
+                  // formula.value += ' - ' + (String)(calcNumberArray[j+1])
+                  break;
+                case '*':
+                  tmpCalcResult=tmpCalcResult.times(calcNumberArray[j+1]) 
+                  // formula.value += ' * ' + (String)(calcNumberArray[j+1])
+                  break;
+                case '/':
+                  // ゼロ割になる場合はスキップ
+                  if(calcNumberArray[j+1].eq(0)){
+                    continue;
+                  }else{
+                    tmpCalcResult=tmpCalcResult.div(calcNumberArray[j+1]) 
+                    // formula.value += ' / ' + (String)(calcNumberArray[j+1])
+                  }
+                  break;
+                default:
+                  break;
+              }
+            }
 
-      //       // 正解の値が導き出せたらtrueを返却して処理終了
-      //       if(tmpCalcResult.eq(answerNumber)){
-      //         return true
-      //       }
-      //     }
+            // 正解の値が導き出せたらtrueを返却して処理終了
+            // if(tmpCalcResult.eq(answerNumber)){
+              // return true
+            // }
+          }
         }
       }
 
