@@ -92,15 +92,15 @@ export default defineComponent({
       let calcNumberArray = inputNumberArray
       
       // 配列入れ替え時の数字退避用変数
-      // let tmpNum: Big = Big(0) 
+      let tmpNum: Big = Big(0) 
 
       // 入力数字から並び順のバリエーションを作成しながら試算
       for( let i = 0; i < calcNumberArray.length; i++ ){
         // 次のループ用に初期配列を作成（初回は処理不要だが･･･処理しても問題ない）
         calcNumberArray = inputNumberArray
-      //   tmpNum = inputNumberArray[i]
-      //   calcNumberArray[i] = inputNumberArray[0]
-      //   calcNumberArray[0] = tmpNum
+        tmpNum = inputNumberArray[i]
+        calcNumberArray[i] = inputNumberArray[0]
+        calcNumberArray[0] = tmpNum
 
       //   // 先頭数字を固定し、2〜4桁目を順に入れ替えていく
       //   for(let j = 0; j < 6; j++ ){
