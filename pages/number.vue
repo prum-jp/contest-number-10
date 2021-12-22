@@ -38,12 +38,12 @@ export default defineComponent({
     // // 10になる式を格納する
     // const formula = ref<String>('')
 
-    // // 四則演算記号
-    // const symbols = ['+', '-', '*', '/']
+    // 四則演算記号
+    const symbols = ['+', '-', '*', '/']
 
-    // // 四則演算記号の全バリエーション格納用配列
-    // // 各要素内の記号はカンマで区切る
-    // const symbolVariations = ref<Array<String>>([])
+    // 四則演算記号の全バリエーション格納用配列
+    // 各要素内の記号はカンマで区切る
+    const symbolVariations = ref<Array<String>>([])
 
     // "計算実行"ボタン押下時に実行されるメソッド
     // ここでresultsに10になる答えを入れる
@@ -56,12 +56,12 @@ export default defineComponent({
       const inputNumberArray = ref<Array<Big>>([])
       // // 入力数字を１要素ごと配列へ格納
       inputNumberArray.value.push(Big(first.value))
-      // inputNumberArray.value.push(Big(second.value))
-      // inputNumberArray.value.push(Big(third.value))
-      // inputNumberArray.value.push(Big(fourth.value))
+      inputNumberArray.value.push(Big(second.value))
+      inputNumberArray.value.push(Big(third.value))
+      inputNumberArray.value.push(Big(fourth.value))
       
-      // // 四則演算記号の全バリエーションを配列へ設定
-      // setSymbolVariations()
+      // 四則演算記号の全バリエーションを配列へ設定
+      setSymbolVariations()
 
       // // 計算を実行
       // if(calculation(inputNumberArray.value)){
@@ -73,17 +73,17 @@ export default defineComponent({
       // }
     }
 
-    // // 四則演算記号の全バリエーションを配列へ設定
-    // const setSymbolVariations = () => {
-    //   for(let i = 0; i < symbols.length; i++){
-    //     for(let j = 0; j < symbols.length; j++){
-    //       for(let k = 0; k < symbols.length; k++){
-    //         // カンマ区切りで設定
-    //         symbolVariations.value.push(symbols[i] + ',' +  symbols[j] + ',' + symbols[k])
-    //       }
-    //     }
-    //   }
-    // }
+    // 四則演算記号の全バリエーションを配列へ設定
+    const setSymbolVariations = () => {
+      for(let i = 0; i < symbols.length; i++){
+        for(let j = 0; j < symbols.length; j++){
+          for(let k = 0; k < symbols.length; k++){
+            // カンマ区切りで設定
+            symbolVariations.value.push(symbols[i] + ',' +  symbols[j] + ',' + symbols[k])
+          }
+        }
+      }
+    }
 
     // // 計算実行
     // // 引数1：入力数字の配列
